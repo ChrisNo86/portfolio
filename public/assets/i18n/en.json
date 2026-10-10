@@ -1,0 +1,238 @@
+{
+  "nav": {
+    "main": "Main navigation",
+    "about": "About me",
+    "skills": "Skills",
+    "projects": "Projects",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "switchLanguage": "Switch language (English / German)"
+  },
+  "hero": {
+    "role": "Frontend Developer",
+    "checkWork": "Check my work",
+    "contact": "Contact me",
+    "scrollDown": "Scroll to the About me section",
+    "banner": [
+      "Available for remote work",
+      "Frontend Developer",
+      "Based in Detmold",
+      "Open to work"
+    ]
+  },
+  "about": {
+    "label": "Who I Am",
+    "title": "About me",
+    "photoAlt": "Portrait of Chris Noack",
+    "intro": "Hi, I'm Chris! I am a frontend developer who loves turning ideas into clean, responsive interfaces that are a pleasure to use. What fascinates me about coding is the moment when a complex problem suddenly becomes a simple, elegant solution – and the fact that web development never stands still.",
+    "highlights": [
+      "I am based in Detmold, Germany, and open to working remotely.",
+      "I am curious about new technologies and keep expanding my skills – right now with a strong focus on Angular and TypeScript.",
+      "I approach problems analytically: understand them, break them down, test and improve. Every challenge teaches me something new, and I enjoy finding solutions together with a team through creativity, persistence and collaboration."
+    ]
+  },
+  "skills": {
+    "label": "Technologies",
+    "title": "Skill Set",
+    "text": "I build modern web applications with HTML, CSS, JavaScript, TypeScript and Angular. I enjoy learning new technologies and adapting to new tools quickly, because keeping up with the rapid changes in web development is part of my daily work.",
+    "needSkill": "You need",
+    "anotherSkill": "another skill?",
+    "note": "Feel free to contact me. I look forward to expanding on my previous knowledge.",
+    "cta": "Let's Talk",
+    "items": {
+      "html": "HTML",
+      "css": "CSS",
+      "javascript": "JavaScript",
+      "materialDesign": "Material Design",
+      "typescript": "TypeScript",
+      "angular": "Angular",
+      "supabase": "Supabase",
+      "git": "Git",
+      "restApi": "REST-API",
+      "scrum": "Scrum",
+      "growthMindset": "Growth mindset"
+    },
+    "growthHint": "I have a special interest in learning"
+  },
+  "projects": {
+    "label": "Portfolio",
+    "title": "Featured Projects",
+    "text": "Explore a selection of my work here – interact with the projects to see my skills in action.",
+    "items": {
+      "join": "Task manager inspired by the Kanban system. Create and organize tasks using drag and drop, assign contacts, priorities and categories – all data is stored in Firebase.",
+      "elPolloLoco": "Jump-and-run game based on object-oriented JavaScript. Guide the character through the level, avoid obstacles and defeat the giant crazy chicken.",
+      "memory": "Memory card game for two players, written in TypeScript without any framework. Choose between four themes and three board sizes, with a live scoreboard and 3D card flip animations."
+    },
+    "dialog": {
+      "about": "What is this project about?",
+      "liveTest": "Live Test",
+      "next": "Next project",
+      "close": "Close project details",
+      "previewAlt": "Screenshot of the project {{title}}"
+    },
+    "moreRepos": "More projects on GitHub"
+  },
+  "testimonials": {
+    "title": "What my colleagues say about me",
+    "previous": "Previous testimonial",
+    "next": "Next testimonial",
+    "goTo": "Show testimonial",
+    "items": [
+      {
+        "quote": "[TODO: real quote from a teammate]",
+        "author": "[TODO: Name - Role]"
+      },
+      {
+        "quote": "[TODO: real quote from a teammate]",
+        "author": "[TODO: Name - Role]"
+      },
+      {
+        "quote": "[TODO: real quote from a teammate]",
+        "author": "[TODO: Name - Role]"
+      }
+    ]
+  },
+  "contact": {
+    "label": "Contact me",
+    "title": "Let's work together",
+    "subtitle": "Got a problem to solve?",
+    "text": "Are you looking for a motivated developer who builds clean, responsive and maintainable frontends? Send me a message – I am looking forward to bringing my skills into your team and your projects.",
+    "question": "Need a Frontend developer?",
+    "letsTalk": "Let's talk!",
+    "form": {
+      "nameLabel": "What's your name?",
+      "namePlaceholder": "Your name goes here",
+      "nameError": "Please enter your name.",
+      "emailLabel": "What's your email?",
+      "emailPlaceholder": "youremail@email.com",
+      "emailError": "Please enter a valid email address.",
+      "messageLabel": "How can I help you?",
+      "messagePlaceholder": "Hello Chris, I am interested in...",
+      "messageError": "Please write a message.",
+      "privacyBefore": "I've read the",
+      "privacyLink": "privacy policy",
+      "privacyAfter": "and agree to the processing of my data as outlined.",
+      "privacyError": "Please accept the privacy policy.",
+      "submit": "Say Hello ;)",
+      "sending": "Sending...",
+      "success": "Thank you! Your message has been sent.",
+      "failure": "Sorry, your message could not be sent. Please try again later.",
+      "nameMissing": "Oops! it seems your name is missing",
+      "emailMissing": "Hoppla! your email is required",
+      "messageMissing": "What do you need to develop?"
+    }
+  },
+  "footer": {
+    "role": "Frontend Developer",
+    "location": "Detmold, Germany",
+    "email": "Email",
+    "legalNotice": "Legal Notice",
+    "privacyPolicy": "Privacy Policy"
+  },
+  "legalNotice": {
+    "title": "Legal Notice",
+    "date": "Last updated: October 10, 2026",
+    "sections": [
+      {
+        "title": "Imprint",
+        "paragraphs": [
+          "Information according to § 5 DDG (German Digital Services Act):\n{name}\n{street}\n{city}\n{country}"
+        ]
+      },
+      {
+        "title": "Contact",
+        "paragraphs": [
+          "Email: {email}"
+        ]
+      },
+      {
+        "title": "About this website",
+        "paragraphs": [
+          "This website is my personal portfolio. It was created as part of my training at the Developer Akademie GmbH and presents my projects and skills.",
+          "The design of this website is owned by the Developer Akademie GmbH. Unauthorized use, reproduction, modification or distribution of the design is prohibited."
+        ]
+      },
+      {
+        "title": "Liability for content",
+        "paragraphs": [
+          "The contents of this website were created with great care. However, I cannot guarantee that the content is accurate, complete or up to date. If I become aware of any legal violations, I will remove the relevant content immediately."
+        ]
+      },
+      {
+        "title": "Liability for links",
+        "paragraphs": [
+          "This website contains links to external websites (e.g. GitHub). I have no influence on their content and therefore cannot accept any liability for it. The respective provider or operator of the linked pages is always responsible for their content."
+        ]
+      },
+      {
+        "title": "Copyright",
+        "paragraphs": [
+          "The content and code created by me on this website are subject to German copyright law. Reproduction, editing or distribution beyond the limits of copyright law requires my written consent."
+        ]
+      }
+    ]
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "date": "Last updated: October 10, 2026",
+    "sections": [
+      {
+        "title": "1. Controller",
+        "paragraphs": [
+          "The person responsible for data processing on this website is:\n{name}\n{street}\n{city}\n{country}\nEmail: {email}"
+        ]
+      },
+      {
+        "title": "2. Overview",
+        "paragraphs": [
+          "This website does not use cookies, tracking or analytics tools. Personal data is only processed to the extent necessary to provide the website and to answer your messages."
+        ]
+      },
+      {
+        "title": "3. Hosting and server log files",
+        "paragraphs": [
+          "This website is hosted by [TODO: name and address of your hosting provider]. When you visit the website, the server automatically stores information in log files: IP address, date and time of the request, requested page, browser type and version, operating system and referrer URL.",
+          "This data is required to deliver the website securely and is processed on the basis of Art. 6 (1) (f) GDPR (legitimate interest in the secure and stable operation of the website). It is not merged with other data sources."
+        ]
+      },
+      {
+        "title": "4. Contact form",
+        "paragraphs": [
+          "If you send me a message via the contact form, your name, email address and message are transmitted to my mail server and sent to me by email. I use this data exclusively to process your request.",
+          "The legal basis is Art. 6 (1) (b) GDPR if your request is related to a contract or pre-contractual measures, otherwise Art. 6 (1) (f) GDPR (legitimate interest in answering inquiries). Your data will be deleted as soon as your request has been completed, unless statutory retention obligations apply."
+        ]
+      },
+      {
+        "title": "5. Language setting (local storage)",
+        "paragraphs": [
+          "When you switch the language, your choice (\"en\" or \"de\") is stored in the local storage of your browser so that the website remembers it on your next visit. This information never leaves your device. You can delete it at any time via your browser settings."
+        ]
+      },
+      {
+        "title": "6. Fonts",
+        "paragraphs": [
+          "The fonts used on this website are hosted locally on this server. No connection to external font providers (e.g. Google Fonts) is established."
+        ]
+      },
+      {
+        "title": "7. External links",
+        "paragraphs": [
+          "This website contains links to external services such as GitHub. Data is only transmitted to these providers when you click on a link. Their own privacy policies apply."
+        ]
+      },
+      {
+        "title": "8. Your rights",
+        "paragraphs": [
+          "You have the right to access (Art. 15 GDPR), rectification (Art. 16 GDPR), erasure (Art. 17 GDPR), restriction of processing (Art. 18 GDPR), data portability (Art. 20 GDPR) and to object to processing (Art. 21 GDPR). To exercise these rights, simply send me an email.",
+          "You also have the right to lodge a complaint with a data protection supervisory authority (Art. 77 GDPR)."
+        ]
+      },
+      {
+        "title": "9. SSL/TLS encryption",
+        "paragraphs": [
+          "For security reasons, this website uses SSL/TLS encryption. You can recognize an encrypted connection by \"https://\" in the address bar of your browser."
+        ]
+      }
+    ]
+  }
+}

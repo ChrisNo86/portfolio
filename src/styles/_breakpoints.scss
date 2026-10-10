@@ -1,0 +1,15 @@
+// Breakpoints derived from the Figma mockups (mobile 390px, desktop 1440px).
+$mobile: 768px;
+$tablet: 1100px;
+
+@mixin mobile {
+  @media (max-width: $mobile) {
+    @content;
+  }
+}
+
+@mixin tablet-down {
+  @media (max-width: $tablet) {
+    @content;
+  }
+}

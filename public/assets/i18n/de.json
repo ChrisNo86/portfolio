@@ -1,0 +1,238 @@
+{
+  "nav": {
+    "main": "Hauptnavigation",
+    "about": "Über mich",
+    "skills": "Skills",
+    "projects": "Projekte",
+    "openMenu": "Menü öffnen",
+    "closeMenu": "Menü schließen",
+    "switchLanguage": "Sprache wechseln (Englisch / Deutsch)"
+  },
+  "hero": {
+    "role": "Frontend Developer",
+    "checkWork": "Meine Projekte",
+    "contact": "Kontakt",
+    "scrollDown": "Zum Abschnitt Über mich scrollen",
+    "banner": [
+      "Offen für Remote-Arbeit",
+      "Frontend Developer",
+      "Wohnhaft in Detmold",
+      "Offen für neue Jobs"
+    ]
+  },
+  "about": {
+    "label": "Wer ich bin",
+    "title": "Über mich",
+    "photoAlt": "Porträt von Chris Noack",
+    "intro": "Hi, ich bin Chris! Als Frontend-Entwickler verwandle ich Ideen in saubere, responsive Oberflächen, die Spaß machen. Am Programmieren fasziniert mich der Moment, in dem aus einem komplexen Problem plötzlich eine einfache, elegante Lösung wird – und dass die Webentwicklung niemals stillsteht.",
+    "highlights": [
+      "Ich wohne in Detmold und bin offen für Remote-Arbeit.",
+      "Ich bin neugierig auf neue Technologien und erweitere ständig meine Fähigkeiten – aktuell mit klarem Fokus auf Angular und TypeScript.",
+      "Ich gehe Probleme analytisch an: verstehen, zerlegen, testen und verbessern. Jede Herausforderung bringt mir etwas Neues bei, und ich finde gerne gemeinsam im Team Lösungen – mit Kreativität, Ausdauer und Zusammenarbeit."
+    ]
+  },
+  "skills": {
+    "label": "Technologien",
+    "title": "Skill Set",
+    "text": "Ich entwickle moderne Webanwendungen mit HTML, CSS, JavaScript, TypeScript und Angular. Ich lerne gerne neue Technologien und arbeite mich schnell in neue Tools ein, denn mit dem rasanten Wandel der Webentwicklung Schritt zu halten, gehört für mich zum Alltag.",
+    "needSkill": "Du brauchst",
+    "anotherSkill": "einen anderen Skill?",
+    "note": "Melde dich gerne bei mir. Ich freue mich darauf, mein Wissen zu erweitern.",
+    "cta": "Lass uns reden",
+    "items": {
+      "html": "HTML",
+      "css": "CSS",
+      "javascript": "JavaScript",
+      "materialDesign": "Material Design",
+      "typescript": "TypeScript",
+      "angular": "Angular",
+      "supabase": "Supabase",
+      "git": "Git",
+      "restApi": "REST-API",
+      "scrum": "Scrum",
+      "growthMindset": "Growth Mindset"
+    },
+    "growthHint": "Ich habe besonderes Interesse daran zu lernen"
+  },
+  "projects": {
+    "label": "Portfolio",
+    "title": "Ausgewählte Projekte",
+    "text": "Hier findest du eine Auswahl meiner Arbeiten – probiere die Projekte aus und sieh meine Fähigkeiten in Aktion.",
+    "items": {
+      "join": "Aufgabenmanager nach dem Kanban-Prinzip. Erstelle und organisiere Aufgaben per Drag-and-drop, weise Kontakte, Prioritäten und Kategorien zu – alle Daten werden in Firebase gespeichert.",
+      "elPolloLoco": "Jump-and-Run-Spiel auf Basis von objektorientiertem JavaScript. Führe die Spielfigur durch das Level, weiche Hindernissen aus und besiege das riesige verrückte Huhn.",
+      "memory": "Memory-Kartenspiel für zwei Spieler, geschrieben in TypeScript ohne Framework. Wähle zwischen vier Themes und drei Spielfeldgrößen – mit Live-Punktestand und 3D-Kartenanimationen."
+    },
+    "dialog": {
+      "about": "Worum geht es in diesem Projekt?",
+      "liveTest": "Live-Test",
+      "next": "Nächstes Projekt",
+      "close": "Projektdetails schließen",
+      "previewAlt": "Screenshot des Projekts {{title}}"
+    },
+    "moreRepos": "Weitere Projekte auf GitHub"
+  },
+  "testimonials": {
+    "title": "Was meine Kollegen über mich sagen",
+    "previous": "Vorheriges Testimonial",
+    "next": "Nächstes Testimonial",
+    "goTo": "Testimonial anzeigen",
+    "items": [
+      {
+        "quote": "[TODO: echtes Zitat eines Teammitglieds]",
+        "author": "[TODO: Name - Rolle]"
+      },
+      {
+        "quote": "[TODO: echtes Zitat eines Teammitglieds]",
+        "author": "[TODO: Name - Rolle]"
+      },
+      {
+        "quote": "[TODO: echtes Zitat eines Teammitglieds]",
+        "author": "[TODO: Name - Rolle]"
+      }
+    ]
+  },
+  "contact": {
+    "label": "Kontakt",
+    "title": "Lass uns zusammen­arbeiten",
+    "subtitle": "Hast du ein Problem zu lösen?",
+    "text": "Du suchst einen motivierten Entwickler, der saubere, responsive und wartbare Frontends baut? Schreib mir eine Nachricht – ich freue mich darauf, meine Fähigkeiten in dein Team und deine Projekte einzubringen.",
+    "question": "Brauchst du einen Frontend-Entwickler?",
+    "letsTalk": "Lass uns reden!",
+    "form": {
+      "nameLabel": "Wie heißt du?",
+      "namePlaceholder": "Dein Name",
+      "nameError": "Bitte gib deinen Namen ein.",
+      "emailLabel": "Wie lautet deine E-Mail?",
+      "emailPlaceholder": "deine.email@email.de",
+      "emailError": "Bitte gib eine gültige E-Mail-Adresse ein.",
+      "messageLabel": "Wie kann ich dir helfen?",
+      "messagePlaceholder": "Hallo Chris, ich interessiere mich für...",
+      "messageError": "Bitte schreib eine Nachricht.",
+      "privacyBefore": "Ich habe die",
+      "privacyLink": "Datenschutzerklärung",
+      "privacyAfter": "gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.",
+      "privacyError": "Bitte akzeptiere die Datenschutzerklärung.",
+      "submit": "Sag Hallo ;)",
+      "sending": "Wird gesendet...",
+      "success": "Danke! Deine Nachricht wurde gesendet.",
+      "failure": "Leider konnte deine Nachricht nicht gesendet werden. Bitte versuche es später erneut.",
+      "nameMissing": "Hoppla! Dein Name fehlt noch",
+      "emailMissing": "Hoppla! Deine E-Mail-Adresse fehlt",
+      "messageMissing": "Was möchtest du entwickeln?"
+    }
+  },
+  "footer": {
+    "role": "Frontend Developer",
+    "location": "Detmold, Deutschland",
+    "email": "E-Mail",
+    "legalNotice": "Impressum",
+    "privacyPolicy": "Datenschutz"
+  },
+  "legalNotice": {
+    "title": "Impressum",
+    "date": "Stand: 10. Oktober 2026",
+    "sections": [
+      {
+        "title": "Angaben gemäß § 5 DDG",
+        "paragraphs": [
+          "{name}\n{street}\n{city}\n{country}"
+        ]
+      },
+      {
+        "title": "Kontakt",
+        "paragraphs": [
+          "E-Mail: {email}"
+        ]
+      },
+      {
+        "title": "Über diese Website",
+        "paragraphs": [
+          "Diese Website ist mein persönliches Portfolio. Sie ist im Rahmen meiner Weiterbildung an der Developer Akademie GmbH entstanden und stellt meine Projekte und Fähigkeiten vor.",
+          "Das Design dieser Website ist Eigentum der Developer Akademie GmbH. Die unerlaubte Nutzung, Vervielfältigung, Veränderung oder Verbreitung des Designs ist untersagt."
+        ]
+      },
+      {
+        "title": "Haftung für Inhalte",
+        "paragraphs": [
+          "Die Inhalte dieser Website wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte kann ich jedoch keine Gewähr übernehmen. Sobald mir Rechtsverletzungen bekannt werden, entferne ich die betreffenden Inhalte umgehend."
+        ]
+      },
+      {
+        "title": "Haftung für Links",
+        "paragraphs": [
+          "Diese Website enthält Links zu externen Websites (z. B. GitHub). Auf deren Inhalte habe ich keinen Einfluss und übernehme daher keine Haftung dafür. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber verantwortlich."
+        ]
+      },
+      {
+        "title": "Urheberrecht",
+        "paragraphs": [
+          "Die von mir erstellten Inhalte und der Code dieser Website unterliegen dem deutschen Urheberrecht. Vervielfältigung, Bearbeitung oder Verbreitung außerhalb der Grenzen des Urheberrechts bedürfen meiner schriftlichen Zustimmung."
+        ]
+      }
+    ]
+  },
+  "privacy": {
+    "title": "Datenschutz",
+    "date": "Stand: 10. Oktober 2026",
+    "sections": [
+      {
+        "title": "1. Verantwortlicher",
+        "paragraphs": [
+          "Verantwortlich für die Datenverarbeitung auf dieser Website ist:\n{name}\n{street}\n{city}\n{country}\nE-Mail: {email}"
+        ]
+      },
+      {
+        "title": "2. Überblick",
+        "paragraphs": [
+          "Diese Website verwendet keine Cookies, kein Tracking und keine Analyse-Tools. Personenbezogene Daten werden nur verarbeitet, soweit dies für die Bereitstellung der Website und die Beantwortung deiner Nachrichten erforderlich ist."
+        ]
+      },
+      {
+        "title": "3. Hosting und Server-Logfiles",
+        "paragraphs": [
+          "Diese Website wird gehostet bei [TODO: Name und Anschrift deines Hosting-Anbieters]. Beim Aufruf der Website speichert der Server automatisch Informationen in Logfiles: IP-Adresse, Datum und Uhrzeit des Zugriffs, aufgerufene Seite, Browsertyp und -version, Betriebssystem und Referrer-URL.",
+          "Diese Daten sind für die sichere Auslieferung der Website erforderlich und werden auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO verarbeitet (berechtigtes Interesse am sicheren und stabilen Betrieb der Website). Eine Zusammenführung mit anderen Datenquellen findet nicht statt."
+        ]
+      },
+      {
+        "title": "4. Kontaktformular",
+        "paragraphs": [
+          "Wenn du mir über das Kontaktformular eine Nachricht sendest, werden dein Name, deine E-Mail-Adresse und deine Nachricht an meinen Mailserver übertragen und mir per E-Mail zugestellt. Ich nutze diese Daten ausschließlich zur Bearbeitung deiner Anfrage.",
+          "Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO, sofern deine Anfrage mit einem Vertrag oder vorvertraglichen Maßnahmen zusammenhängt, ansonsten Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der Beantwortung von Anfragen). Deine Daten werden gelöscht, sobald deine Anfrage abschließend bearbeitet ist, sofern keine gesetzlichen Aufbewahrungspflichten bestehen."
+        ]
+      },
+      {
+        "title": "5. Spracheinstellung (Local Storage)",
+        "paragraphs": [
+          "Wenn du die Sprache wechselst, wird deine Auswahl („en“ oder „de“) im Local Storage deines Browsers gespeichert, damit die Website sie bei deinem nächsten Besuch beibehält. Diese Information verlässt dein Gerät nicht. Du kannst sie jederzeit über die Einstellungen deines Browsers löschen."
+        ]
+      },
+      {
+        "title": "6. Schriftarten",
+        "paragraphs": [
+          "Die auf dieser Website verwendeten Schriftarten werden lokal auf diesem Server bereitgestellt. Es wird keine Verbindung zu externen Anbietern (z. B. Google Fonts) aufgebaut."
+        ]
+      },
+      {
+        "title": "7. Externe Links",
+        "paragraphs": [
+          "Diese Website enthält Links zu externen Diensten wie GitHub. Daten werden an diese Anbieter erst übertragen, wenn du auf einen Link klickst. Es gelten deren eigene Datenschutzbestimmungen."
+        ]
+      },
+      {
+        "title": "8. Deine Rechte",
+        "paragraphs": [
+          "Du hast das Recht auf Auskunft (Art. 15 DSGVO), Berichtigung (Art. 16 DSGVO), Löschung (Art. 17 DSGVO), Einschränkung der Verarbeitung (Art. 18 DSGVO), Datenübertragbarkeit (Art. 20 DSGVO) sowie auf Widerspruch gegen die Verarbeitung (Art. 21 DSGVO). Um diese Rechte auszuüben, genügt eine E-Mail an mich.",
+          "Außerdem hast du das Recht, dich bei einer Datenschutz-Aufsichtsbehörde zu beschweren (Art. 77 DSGVO)."
+        ]
+      },
+      {
+        "title": "9. SSL-/TLS-Verschlüsselung",
+        "paragraphs": [
+          "Diese Website nutzt aus Sicherheitsgründen eine SSL-/TLS-Verschlüsselung. Eine verschlüsselte Verbindung erkennst du an „https://“ in der Adresszeile deines Browsers."
+        ]
+      }
+    ]
+  }
+}

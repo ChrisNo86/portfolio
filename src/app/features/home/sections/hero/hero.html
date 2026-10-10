@@ -1,0 +1,50 @@
+<section class="hero" id="top">
+  <div class="hero__content">
+    <p class="hero__role">{{ 'hero.role' | translate }}</p>
+    <h1 class="hero__name">{{ config.ownerName }}</h1>
+    <div class="hero__actions">
+      <a class="btn btn--marquee" routerLink="/" fragment="projects">
+        <span class="btn__label">{{ 'hero.checkWork' | translate }}</span>
+      </a>
+      <a class="btn btn--marquee" routerLink="/" fragment="contact">
+        <span class="btn__label">{{ 'hero.contact' | translate }}</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="hero__rail hero__rail--start">
+    <a class="hero__scroll" routerLink="/" fragment="about" [attr.aria-label]="'hero.scrollDown' | translate">
+      <svg class="hero__scroll-arrow" viewBox="0 0 10 14" aria-hidden="true">
+        <path d="M5 0v12.5M1 8.5l4 4 4-4" />
+      </svg>
+    </a>
+    <span class="hero__line hero__line--accent"></span>
+  </div>
+
+  <div class="hero__rail hero__rail--end">
+    <a class="hero__email" [href]="'mailto:' + config.email">{{ config.email }}</a>
+    <a class="hero__icon hero__icon--mail has-hover-dot" [href]="'mailto:' + config.email" aria-label="E-Mail">
+      <img src="assets/icons/mail.svg" alt="" width="32" height="32" />
+    </a>
+    <a class="hero__icon has-hover-dot" [href]="config.githubUrl" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+      <img src="assets/icons/github.svg" alt="" width="26" height="26" />
+    </a>
+    @if (config.linkedinUrl) {
+      <a class="hero__icon has-hover-dot" [href]="config.linkedinUrl" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+        <img src="assets/icons/linkedin.svg" alt="" width="26" height="26" />
+      </a>
+    }
+    <span class="hero__line"></span>
+  </div>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      @for (copy of marqueeCopies; track copy) {
+        @for (item of bannerItems(); track $index) {
+          <span class="marquee__dot"></span>
+          <span class="marquee__item">{{ item }}</span>
+        }
+      }
+    </div>
+  </div>
+</section>

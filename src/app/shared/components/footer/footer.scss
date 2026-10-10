@@ -1,0 +1,68 @@
+@use '../../../../styles/breakpoints' as bp;
+
+.footer {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  padding: 135px 0 64px;
+}
+
+.footer__info {
+  margin-top: 32px;
+  font-size: 16px;
+  line-height: 27px;
+}
+
+.footer__copyright {
+  font-family: var(--font-mono);
+  font-size: 18px;
+  color: var(--color-accent);
+}
+
+.footer__links {
+  justify-self: end;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  min-width: 88px;
+  padding: 0;
+  list-style: none;
+  font-size: 16px;
+  line-height: 20px;
+
+  a {
+    transition: color 0.2s;
+
+    &::after {
+      top: calc(50% - 3px);
+      left: -12px;
+    }
+
+    &:hover,
+    &:focus-visible {
+      color: var(--color-accent);
+    }
+  }
+}
+
+@include bp.mobile {
+  .footer {
+    grid-template-columns: 1fr auto;
+    row-gap: 32px;
+    padding: 96px 0 32px;
+  }
+
+  .footer__info {
+    margin-top: 32px;
+  }
+
+  .footer__copyright {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    justify-self: center;
+  }
+
+  .footer__links {
+    min-width: 0;
+  }
+}

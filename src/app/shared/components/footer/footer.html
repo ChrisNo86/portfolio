@@ -1,0 +1,21 @@
+<footer class="footer container">
+  <div class="footer__brand">
+    <a routerLink="/" aria-label="Home"><app-logo /></a>
+    <p class="footer__info">
+      {{ 'footer.role' | translate }}<br />
+      {{ 'footer.location' | translate }}
+    </p>
+  </div>
+
+  <p class="footer__copyright">© {{ config.ownerName }} {{ year }}</p>
+
+  <ul class="footer__links">
+    <li><a class="has-hover-dot" [href]="config.githubUrl" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+    @if (config.linkedinUrl) {
+      <li><a class="has-hover-dot" [href]="config.linkedinUrl" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+    }
+    <li><a class="has-hover-dot" [href]="'mailto:' + config.email">{{ 'footer.email' | translate }}</a></li>
+    <li><a class="has-hover-dot" routerLink="/legal-notice">{{ 'footer.legalNotice' | translate }}</a></li>
+    <li><a class="has-hover-dot" routerLink="/privacy-policy">{{ 'footer.privacyPolicy' | translate }}</a></li>
+  </ul>
+</footer>

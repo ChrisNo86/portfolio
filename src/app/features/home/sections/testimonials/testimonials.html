@@ -1,0 +1,43 @@
+@if (slides().length) {
+  <section class="testimonials" [attr.aria-label]="'testimonials.title' | translate">
+    <h2 class="testimonials__title">{{ 'testimonials.title' | translate }}</h2>
+
+    <div class="testimonials__stage" [class.testimonials__stage--static]="!animate()">
+      @for (slide of slides(); track slide.slot) {
+        <figure
+          class="card"
+          [class.card--current]="slide.position === 0"
+          [style.--position]="slide.position"
+          [attr.aria-hidden]="slide.position !== 0"
+        >
+          <img class="card__quote-icon" src="assets/icons/quote.svg" alt="" width="89" height="64" />
+          <blockquote class="card__quote">{{ slide.testimonial.quote }}</blockquote>
+          <figcaption class="card__author">
+            <span class="card__line"></span>
+            {{ slide.testimonial.author }}
+          </figcaption>
+        </figure>
+      }
+    </div>
+
+    <div class="testimonials__controls">
+      <button type="button" class="testimonials__arrow" [attr.aria-label]="'testimonials.previous' | translate" (click)="previous()">
+        <app-icon name="arrow-left" [size]="32" />
+      </button>
+      <div class="testimonials__dots">
+        @for (item of testimonials(); track $index) {
+          <button
+            type="button"
+            class="dot"
+            [class.dot--active]="$index === activeIndex()"
+            [attr.aria-label]="('testimonials.goTo' | translate) + ' ' + ($index + 1)"
+            (click)="goTo($index)"
+          ></button>
+        }
+      </div>
+      <button type="button" class="testimonials__arrow" [attr.aria-label]="'testimonials.next' | translate" (click)="next()">
+        <app-icon name="arrow-right" [size]="32" />
+      </button>
+    </div>
+  </section>
+}

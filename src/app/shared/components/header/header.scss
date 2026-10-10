@@ -1,0 +1,98 @@
+@use '../../../../styles/breakpoints' as bp;
+
+.header {
+  position: absolute;
+  inset: 0 0 auto;
+  z-index: 100;
+  height: var(--header-height);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 16%, rgba(0, 0, 0, 0) 86%);
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  padding-bottom: 2px;
+}
+
+.header__start {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.header__nav {
+  display: flex;
+  gap: 26px;
+}
+
+.header__link {
+  font-family: var(--font-mono);
+  font-size: 20px;
+  color: var(--color-text);
+
+  &::after {
+    left: calc(50% - 3px);
+    bottom: -12px;
+  }
+}
+
+.mobile-only {
+  display: none;
+}
+
+@include bp.mobile {
+  .header__inner {
+    padding-top: 16px;
+  }
+
+  .desktop-only {
+    display: none;
+  }
+
+  .mobile-only {
+    display: inline-flex;
+  }
+}
+
+.menu-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+}
+
+.mobile-menu {
+  position: absolute;
+  top: 88px;
+  right: var(--gutter);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  width: 238px;
+  padding: 36px 0 32px;
+  border: 1px solid var(--color-accent);
+  border-radius: 30px;
+  background: linear-gradient(135deg, #1c1c1c 35%, var(--color-accent-dark) 100%);
+  animation: menu-in 0.2s ease-out;
+}
+
+.mobile-menu__link {
+  font-family: var(--font-mono);
+  font-size: 20px;
+  line-height: 24px;
+  color: var(--color-text);
+
+  &::after {
+    top: calc(50% - 3px);
+    left: -14px;
+  }
+}
+
+@keyframes menu-in {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+}

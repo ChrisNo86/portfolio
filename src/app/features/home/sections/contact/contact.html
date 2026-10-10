@@ -1,0 +1,103 @@
+<section class="contact container" id="contact">
+  <div class="contact__intro">
+    <p class="section-label">{{ 'contact.label' | translate }}</p>
+    <h2 class="section-title">{{ 'contact.title' | translate }}</h2>
+    <h3 class="contact__subtitle">{{ 'contact.subtitle' | translate }}</h3>
+    <p class="contact__text">{{ 'contact.text' | translate }}</p>
+    <p class="contact__text contact__text--cta">
+      {{ 'contact.question' | translate }}
+      <strong class="contact__highlight">{{ 'contact.letsTalk' | translate }}</strong>
+    </p>
+  </div>
+
+  <form class="form" [formGroup]="form" (ngSubmit)="submit()" novalidate>
+    <div class="form__field">
+      <label class="form__label" for="contact-name">{{ 'contact.form.nameLabel' | translate }}</label>
+      <input
+        id="contact-name"
+        class="form__input"
+        type="text"
+        formControlName="name"
+        autocomplete="name"
+        [class.form__input--missing]="isMissing('name')"
+        [placeholder]="(isMissing('name') ? 'contact.form.nameMissing' : 'contact.form.namePlaceholder') | translate"
+      />
+      <p class="form__error" aria-live="polite">
+        @if (showHint('name')) {
+          {{ 'contact.form.nameError' | translate }}
+        }
+      </p>
+    </div>
+
+    <div class="form__field">
+      <label class="form__label" for="contact-email">{{ 'contact.form.emailLabel' | translate }}</label>
+      <input
+        id="contact-email"
+        class="form__input"
+        type="email"
+        formControlName="email"
+        autocomplete="email"
+        [class.form__input--missing]="isMissing('email')"
+        [placeholder]="(isMissing('email') ? 'contact.form.emailMissing' : 'contact.form.emailPlaceholder') | translate"
+      />
+      <p class="form__error" aria-live="polite">
+        @if (showHint('email')) {
+          {{ 'contact.form.emailError' | translate }}
+        }
+      </p>
+    </div>
+
+    <div class="form__field form__field--message">
+      <label class="form__label" for="contact-message">{{ 'contact.form.messageLabel' | translate }}</label>
+      <textarea
+        id="contact-message"
+        class="form__input form__textarea"
+        formControlName="message"
+        rows="1"
+        [class.form__input--missing]="isMissing('message')"
+        [placeholder]="(isMissing('message') ? 'contact.form.messageMissing' : 'contact.form.messagePlaceholder') | translate"
+      ></textarea>
+      <p class="form__error" aria-live="polite">
+        @if (showHint('message')) {
+          {{ 'contact.form.messageError' | translate }}
+        }
+      </p>
+    </div>
+
+    <div class="form__privacy">
+      <label class="checkbox">
+        <input type="checkbox" class="checkbox__input" formControlName="privacy" />
+        <span class="checkbox__box" aria-hidden="true"></span>
+        <span class="checkbox__text">
+          {{ 'contact.form.privacyBefore' | translate }}
+          <a class="checkbox__link" routerLink="/privacy-policy">{{ 'contact.form.privacyLink' | translate }}</a>
+          {{ 'contact.form.privacyAfter' | translate }}
+        </span>
+      </label>
+      <p class="form__error form__error--privacy" aria-live="polite">
+        @if (showError('privacy')) {
+          {{ 'contact.form.privacyError' | translate }}
+        }
+      </p>
+    </div>
+
+    <button class="btn btn--marquee form__submit" type="submit" [disabled]="form.invalid || status() === 'sending'">
+      <span class="btn__label">
+        {{ (status() === 'sending' ? 'contact.form.sending' : 'contact.form.submit') | translate }}
+      </span>
+    </button>
+
+    <p
+      class="form__feedback"
+      [class.form__feedback--visible]="status() === 'success' || status() === 'error'"
+      [class.form__feedback--error]="status() === 'error'"
+      role="status"
+    >
+      @if (status() === 'success') {
+        {{ 'contact.form.success' | translate }}
+      } @else if (status() === 'error') {
+        {{ 'contact.form.failure' | translate }}
+      }
+    </p>
+  </form>
+</section>

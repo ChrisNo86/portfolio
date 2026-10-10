@@ -1,0 +1,45 @@
+<section class="skills" id="skills">
+  <div class="skills__inner container">
+    <div class="skills__intro">
+      <p class="section-label">{{ 'skills.label' | translate }}</p>
+      <article class="skills__card">
+        <h2 class="section-title">{{ 'skills.title' | translate }}</h2>
+        <p class="skills__text">{{ 'skills.text' | translate }}</p>
+        <h3 class="skills__subtitle">
+          {{ 'skills.needSkill' | translate }}
+          <span class="skills__highlight">{{ 'skills.anotherSkill' | translate }}</span>
+        </h3>
+        <p class="skills__note">{{ 'skills.note' | translate }}</p>
+        <a class="btn btn--marquee skills__cta" routerLink="/" fragment="contact">
+          <span class="btn__label">{{ 'skills.cta' | translate }}</span>
+        </a>
+      </article>
+    </div>
+
+    <ul class="skills__grid">
+      @for (skill of skills; track skill.labelKey) {
+        <li class="skills__item" [class.skills__item--hint]="skill.hint" [attr.tabindex]="skill.hint ? 0 : null">
+          @if (skill.hint; as hint) {
+            <div class="hint" role="tooltip">
+              <p class="hint__text">{{ hint.textKey | translate }}</p>
+              <ul class="hint__list">
+                @for (tech of hint.technologies; track tech.name) {
+                  <li>
+                    <img [src]="tech.icon" alt="" width="32" height="32" />
+                    {{ tech.name }}
+                  </li>
+                }
+              </ul>
+            </div>
+          }
+          @if (skill.hint) {
+            <img class="skills__icon" [src]="skill.icon" alt="" height="56" />
+          } @else {
+            <app-icon class="skills__icon" [src]="skill.icon" [size]="56" maskMode="luminance" />
+          }
+          <span class="skills__label">{{ skill.labelKey | translate }}</span>
+        </li>
+      }
+    </ul>
+  </div>
+</section>

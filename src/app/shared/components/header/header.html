@@ -1,0 +1,42 @@
+<header class="header">
+  <div class="header__inner container">
+    <div class="header__start">
+      <app-language-toggle class="desktop-only" />
+      <nav class="header__nav desktop-only" [attr.aria-label]="'nav.main' | translate">
+        @for (link of links; track link.fragment) {
+          <a class="header__link has-hover-dot" routerLink="/" [fragment]="link.fragment">{{ link.labelKey | translate }}</a>
+        }
+      </nav>
+      <a class="mobile-only" routerLink="/" aria-label="Home" (click)="closeMenu()">
+        <app-logo [markOnly]="true" />
+      </a>
+    </div>
+
+    <a class="desktop-only" routerLink="/" aria-label="Home">
+      <app-logo />
+    </a>
+
+    <button
+      type="button"
+      class="header__burger mobile-only"
+      [attr.aria-expanded]="menuOpen()"
+      aria-controls="mobile-menu"
+      [attr.aria-label]="(menuOpen() ? 'nav.closeMenu' : 'nav.openMenu') | translate"
+      (click)="toggleMenu()"
+    >
+      <img [src]="menuOpen() ? 'assets/icons/close.svg' : 'assets/icons/burger.svg'" alt="" width="48" height="48" />
+    </button>
+  </div>
+
+  @if (menuOpen()) {
+    <div class="menu-backdrop" (click)="closeMenu()"></div>
+    <nav id="mobile-menu" class="mobile-menu" [attr.aria-label]="'nav.main' | translate">
+      @for (link of links; track link.fragment) {
+        <a class="mobile-menu__link has-hover-dot" routerLink="/" [fragment]="link.fragment" (click)="closeMenu()">
+          {{ link.labelKey | translate }}
+        </a>
+      }
+      <app-language-toggle />
+    </nav>
+  }
+</header>

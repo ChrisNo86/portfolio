@@ -1,0 +1,231 @@
+@use '../../../../../styles/breakpoints' as bp;
+
+:host {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: grid;
+  place-items: center;
+  padding: 24px var(--gutter);
+  overflow-y: auto;
+}
+
+.backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  animation: fade-in 0.2s ease-out;
+}
+
+.dialog {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 520px);
+  column-gap: 48px;
+  align-items: start;
+  width: min(1248px, 100%);
+  min-height: 656px;
+  padding: 96px 80px 90px;
+  border: 1px solid var(--color-accent);
+  border-radius: 30px;
+  background: linear-gradient(37deg, var(--color-bg) 30%, var(--color-accent-dark) 100%);
+  animation: pop-in 0.25s ease-out;
+}
+
+.dialog__number {
+  font-family: var(--font-sans);
+  font-size: 120px;
+  font-weight: 500;
+  line-height: 1;
+  color: var(--color-accent);
+}
+
+.dialog__title {
+  margin-top: 6px;
+  font-family: var(--font-mono);
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--color-text);
+}
+
+.dialog__question {
+  margin-top: 40px;
+  font-family: var(--font-mono);
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--color-accent);
+}
+
+.dialog__description {
+  margin-top: 26px;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.dialog__tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+  margin-top: 30px;
+  padding: 0;
+  list-style: none;
+  font-size: 16px;
+
+  li {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+}
+
+.dialog__links {
+  display: flex;
+  gap: 32px;
+  margin-top: 40px;
+
+  .btn {
+    height: 46px;
+  }
+}
+
+.dialog__image {
+  width: 100%;
+  aspect-ratio: 520 / 370;
+  margin-top: 47px;
+  object-fit: cover;
+  border-radius: 30px;
+}
+
+.dialog__link-icon {
+  color: var(--color-accent);
+}
+
+.dialog__close {
+  position: absolute;
+  top: 56px;
+  right: 80px;
+  display: grid;
+  color: var(--color-text);
+  transition: color 0.2s;
+
+  &:hover,
+  &:focus-visible {
+    color: var(--color-accent);
+  }
+}
+
+.dialog__next {
+  position: absolute;
+  right: 86px;
+  bottom: 59px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 18px;
+  color: var(--color-accent);
+  transition: color 0.2s;
+
+  &:hover,
+  &:focus-visible {
+    color: var(--color-text);
+  }
+}
+
+.dialog__next-icon {
+  color: var(--color-accent);
+}
+
+@include bp.tablet-down {
+  .dialog {
+    grid-template-columns: 1fr;
+    padding: 80px 40px 100px;
+  }
+
+  .dialog__image {
+    grid-row: 1;
+    margin: 0 0 32px;
+  }
+
+  .dialog__close {
+    top: 16px;
+    right: 24px;
+  }
+
+  .dialog__next {
+    right: 40px;
+    bottom: 40px;
+  }
+}
+
+@include bp.mobile {
+  :host {
+    padding: 16px 12px;
+    align-items: start;
+  }
+
+  .dialog {
+    min-height: 0;
+    padding: 94px 12px 100px;
+    border-radius: 20px;
+  }
+
+  .dialog__image {
+    border-radius: 16px;
+  }
+
+  .dialog__number {
+    font-size: 64px;
+  }
+
+  .dialog__title {
+    margin-top: 0;
+    font-size: 64px;
+  }
+
+  .dialog__question {
+    margin-top: 28px;
+  }
+
+  .dialog__description {
+    margin-top: 16px;
+    font-size: 18px;
+    line-height: 21px;
+  }
+
+  .dialog__tech {
+    margin-top: 20px;
+    font-size: 18px;
+  }
+
+  .dialog__links {
+    justify-content: space-between;
+    gap: 16px;
+    margin-top: 40px;
+    padding: 0 19px;
+  }
+
+  .dialog__close {
+    top: 16px;
+    right: 16px;
+  }
+
+  .dialog__next {
+    right: 30px;
+    bottom: 40px;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+}
+
+@keyframes pop-in {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+}

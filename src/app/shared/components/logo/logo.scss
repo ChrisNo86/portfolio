@@ -1,0 +1,38 @@
+:host {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  height: 48px;
+}
+
+.logo__mark {
+  width: 35px;
+  height: 48px;
+  fill: var(--color-accent);
+  stroke: var(--color-accent);
+  stroke-width: 0;
+  transition: fill 0.2s;
+}
+
+/* Prototype hover: the logo switches to an outline style. */
+:host(:hover) {
+  .logo__mark {
+    fill: transparent;
+    stroke-width: 1.5px;
+  }
+
+  .logo__name {
+    color: transparent;
+    -webkit-text-stroke: 1px var(--color-text);
+  }
+}
+
+.logo__name {
+  font-family: var(--font-sans);
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 22px;
+  letter-spacing: -0.5px;
+  color: var(--color-text);
+  transition: color 0.2s;
+}

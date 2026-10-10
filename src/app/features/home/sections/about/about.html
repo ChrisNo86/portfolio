@@ -1,0 +1,29 @@
+<section class="about container" id="about">
+  <div class="about__photo-frame">
+    <span class="stripes"></span>
+    <img
+      class="about__photo"
+      src="assets/img/profile.jpg"
+      [alt]="'about.photoAlt' | translate"
+      width="568"
+      height="568"
+      loading="lazy"
+    />
+  </div>
+
+  <div class="about__content">
+    <p class="section-label">{{ 'about.label' | translate }}</p>
+    <article class="about__card">
+      <h2 class="section-title">{{ 'about.title' | translate }}</h2>
+      <p class="about__intro">{{ 'about.intro' | translate }}</p>
+      <ul class="about__list">
+        @for (text of highlights(); track $index) {
+          <li class="about__item">
+            <img [src]="icons[$index]" alt="" width="32" height="32" />
+            <span>{{ text }}</span>
+          </li>
+        }
+      </ul>
+    </article>
+  </div>
+</section>

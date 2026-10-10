@@ -1,0 +1,12 @@
+<article class="legal container">
+  <h1 class="legal__title">{{ titleKey() | translate }}</h1>
+  @for (section of filledSections(); track section.title) {
+    <section class="legal__section">
+      <h2 class="legal__heading">{{ section.title }}</h2>
+      @for (paragraph of section.paragraphs; track $index) {
+        <p class="legal__text">{{ paragraph }}</p>
+      }
+    </section>
+  }
+  <p class="legal__date">{{ dateKey() | translate }}</p>
+</article>

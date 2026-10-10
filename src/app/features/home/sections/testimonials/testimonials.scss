@@ -1,0 +1,196 @@
+@use '../../../../../styles/breakpoints' as bp;
+
+.testimonials {
+  padding-top: 167px;
+  overflow: hidden;
+}
+
+.testimonials__title {
+  padding-inline: var(--gutter);
+  font-family: var(--font-mono);
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+  color: var(--color-accent);
+}
+
+.testimonials__stage {
+  --card-width: 632px;
+  --card-gap: 64px;
+
+  position: relative;
+  display: grid;
+  place-items: center;
+  height: 274px;
+  margin-top: 51px;
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: linear-gradient(
+      to right,
+      var(--color-bg) 0%,
+      rgba(28, 28, 28, 0) 10%,
+      rgba(28, 28, 28, 0) 90%,
+      var(--color-bg) 100%
+    );
+  }
+}
+
+.card {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: var(--card-width);
+  height: 247px;
+  margin: 0;
+  padding: 40px 40px 32px;
+  border: 1px solid var(--color-accent);
+  border-radius: 32px;
+  background-color: rgba(61, 207, 182, 0.1);
+  color: var(--color-text-muted);
+  transform: translateX(calc(var(--position) * (var(--card-width) + var(--card-gap))));
+  transition:
+    transform 0.45s ease,
+    height 0.45s ease,
+    padding 0.45s ease,
+    background-color 0.45s ease;
+
+  .card__quote-icon {
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  &--current {
+    height: 274px;
+    padding-top: 52px;
+    background-color: rgba(61, 207, 182, 0.3);
+    color: var(--color-text);
+
+    .card__quote-icon {
+      opacity: 1;
+    }
+  }
+}
+
+.testimonials__stage--static .card,
+.testimonials__stage--static .card__quote-icon {
+  transition: none;
+}
+
+.card__quote-icon {
+  position: absolute;
+  top: -8px;
+  left: -45px;
+}
+
+.card__quote {
+  margin: 0;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.card__author {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 18px;
+}
+
+.card__line {
+  flex: 1;
+  height: 1px;
+  background-color: currentColor;
+  opacity: 0.8;
+}
+
+.testimonials__controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 52px;
+
+  > button {
+    display: grid;
+  }
+}
+
+.testimonials__arrow {
+  color: var(--color-text);
+  transition: color 0.2s;
+
+  &:hover,
+  &:focus-visible {
+    color: var(--color-accent);
+  }
+}
+
+.testimonials__dots {
+  display: flex;
+  gap: 20px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--color-text);
+
+  &--active {
+    background-color: var(--color-accent);
+  }
+}
+
+@include bp.mobile {
+  .testimonials {
+    padding-top: 104px;
+  }
+
+  .testimonials__title {
+    font-size: 24px;
+  }
+
+  .testimonials__stage {
+    --card-width: calc(100vw - 32px);
+    --card-gap: 8px;
+
+    height: 358px;
+    margin-top: 40px;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .card {
+    height: 246px;
+    padding: 40px 40px 32px;
+
+    &--current {
+      height: 358px;
+      padding-top: 88px;
+    }
+  }
+
+  .card__quote-icon {
+    top: -10px;
+    left: 0;
+  }
+
+  .card__quote {
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  .card__author {
+    font-size: 16px;
+  }
+
+  .testimonials__controls {
+    margin-top: 37px;
+  }
+}
