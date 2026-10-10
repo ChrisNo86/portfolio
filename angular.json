@@ -80,8 +80,7 @@
                   "maximumError": "16kB"
                 }
               ],
-              "outputHashing": "all",
-              "baseHref": "/portfolio/"
+              "outputHashing": "all"
             },
             "development": {
               "optimization": false,

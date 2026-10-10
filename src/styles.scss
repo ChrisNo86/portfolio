@@ -44,7 +44,6 @@ body {
   font-size: 18px;
   line-height: 1.2;
   -webkit-font-smoothing: antialiased;
-  overflow-x: hidden;
 
   &.no-scroll {
     overflow: hidden;
@@ -79,7 +78,28 @@ button {
 }
 
 section[id] {
-  scroll-margin-top: 40px;
+  scroll-margin-top: calc(var(--header-height) + 16px);
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition:
+    opacity 0.7s ease-out,
+    transform 0.7s ease-out;
+
+  &--left {
+    transform: translateX(-60px);
+  }
+
+  &--right {
+    transform: translateX(60px);
+  }
+
+  &.is-visible {
+    opacity: 1;
+    transform: none;
+  }
 }
 
 .container {

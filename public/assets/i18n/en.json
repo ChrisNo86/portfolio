@@ -59,7 +59,7 @@
     "title": "Featured Projects",
     "text": "Explore a selection of my work here – interact with the projects to see my skills in action.",
     "items": {
-      "join": "Task manager inspired by the Kanban system. Create and organize tasks using drag and drop, assign contacts, priorities and categories – all data is stored in Firebase.",
+      "pollApp": "Survey app for teams: create surveys with categories and deadlines, see which ones end soon, filter active and past surveys and vote with live results – built with Angular and Firebase Firestore.",
       "elPolloLoco": "Jump-and-run game based on object-oriented JavaScript. Guide the character through the level, avoid obstacles and defeat the giant crazy chicken.",
       "memory": "Memory card game for two players, written in TypeScript without any framework. Choose between four themes and three board sizes, with a live scoreboard and 3D card flip animations."
     },
@@ -103,13 +103,13 @@
     "form": {
       "nameLabel": "What's your name?",
       "namePlaceholder": "Your name goes here",
-      "nameError": "Please enter your name.",
+      "nameError": "Please enter a valid name (letters only).",
       "emailLabel": "What's your email?",
       "emailPlaceholder": "youremail@email.com",
-      "emailError": "Please enter a valid email address.",
+      "emailError": "Please enter a valid email address, e.g. name@example.com.",
       "messageLabel": "How can I help you?",
       "messagePlaceholder": "Hello Chris, I am interested in...",
-      "messageError": "Please write a message.",
+      "messageError": "Please write at least 5 characters.",
       "privacyBefore": "I've read the",
       "privacyLink": "privacy policy",
       "privacyAfter": "and agree to the processing of my data as outlined.",

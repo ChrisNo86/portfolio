@@ -1,11 +1,13 @@
 @use '../../../../../styles/breakpoints' as bp;
 
 .about {
+  overflow-x: clip;
   display: grid;
-  grid-template-columns: 568px 567px;
+  grid-template-columns: minmax(0, 568px) minmax(0, 567px);
   justify-content: space-between;
+  column-gap: 48px;
   align-items: start;
-  padding: 144px 0 0 16px;
+  padding: 144px 0 0 clamp(0px, 1.1vw, 16px);
 }
 
 .about__photo-frame {
@@ -75,17 +77,29 @@
 
 @include bp.tablet-down {
   .about {
-    grid-template-columns: 1fr 1fr;
-    gap: 48px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
     padding-left: 0;
+  }
+
+  .about__photo-frame {
+    width: 100%;
+    max-width: 568px;
+  }
+
+  .about__content {
+    max-width: 680px;
+    padding-top: 56px;
+  }
+
+  .about__intro {
+    text-align: left;
   }
 }
 
 @include bp.mobile {
   .about {
-    display: flex;
-    flex-direction: column;
-    gap: 0;
     padding-top: 100px;
   }
 

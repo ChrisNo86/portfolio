@@ -1,9 +1,11 @@
 <section class="projects container" id="projects">
-  <p class="section-label">{{ 'projects.label' | translate }}</p>
-  <h2 class="section-title">{{ 'projects.title' | translate }}</h2>
-  <p class="projects__text">{{ 'projects.text' | translate }}</p>
+  <div appReveal>
+    <p class="section-label">{{ 'projects.label' | translate }}</p>
+    <h2 class="section-title">{{ 'projects.title' | translate }}</h2>
+    <p class="projects__text">{{ 'projects.text' | translate }}</p>
+  </div>
 
-  <div class="projects__showcase">
+  <div class="projects__showcase" appReveal [delay]="150">
     <ul class="projects__list" (mouseleave)="hover(null)">
       @for (project of projects; track project.id; let index = $index) {
         <li>
@@ -43,7 +45,7 @@
     </div>
   </div>
 
-  <a class="btn btn--marquee projects__more" [href]="repositoriesUrl" target="_blank" rel="noopener noreferrer">
+  <a appReveal class="btn btn--marquee projects__more" [href]="repositoriesUrl" target="_blank" rel="noopener noreferrer">
     <span class="btn__label">{{ 'projects.moreRepos' | translate }}</span>
     <app-icon name="arrow-up-right" [size]="20" />
   </a>

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { TranslatePipe } from '@ngx-translate/core';
 import { translatedList } from '../../../../core/i18n/translated-list';
+import { RevealDirective } from '../../../../shared/directives/reveal.directive';
 
 const HIGHLIGHT_ICONS = [
   'assets/icons/icon-location.svg',
@@ -10,7 +11,7 @@ const HIGHLIGHT_ICONS = [
 
 @Component({
   selector: 'app-about',
-  imports: [TranslatePipe],
+  imports: [RevealDirective, TranslatePipe],
   templateUrl: './about.html',
   styleUrl: './about.scss',
 })

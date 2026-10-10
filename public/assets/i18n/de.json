@@ -59,7 +59,7 @@
     "title": "Ausgewählte Projekte",
     "text": "Hier findest du eine Auswahl meiner Arbeiten – probiere die Projekte aus und sieh meine Fähigkeiten in Aktion.",
     "items": {
-      "join": "Aufgabenmanager nach dem Kanban-Prinzip. Erstelle und organisiere Aufgaben per Drag-and-drop, weise Kontakte, Prioritäten und Kategorien zu – alle Daten werden in Firebase gespeichert.",
+      "pollApp": "Umfrage-App für Teams: Umfragen mit Kategorien und Enddatum erstellen, bald endende Umfragen im Blick behalten, aktive und vergangene filtern und mit Live-Ergebnissen abstimmen – gebaut mit Angular und Firebase Firestore.",
       "elPolloLoco": "Jump-and-Run-Spiel auf Basis von objektorientiertem JavaScript. Führe die Spielfigur durch das Level, weiche Hindernissen aus und besiege das riesige verrückte Huhn.",
       "memory": "Memory-Kartenspiel für zwei Spieler, geschrieben in TypeScript ohne Framework. Wähle zwischen vier Themes und drei Spielfeldgrößen – mit Live-Punktestand und 3D-Kartenanimationen."
     },
@@ -103,13 +103,13 @@
     "form": {
       "nameLabel": "Wie heißt du?",
       "namePlaceholder": "Dein Name",
-      "nameError": "Bitte gib deinen Namen ein.",
+      "nameError": "Bitte gib einen gültigen Namen ein (nur Buchstaben).",
       "emailLabel": "Wie lautet deine E-Mail?",
       "emailPlaceholder": "deine.email@email.de",
-      "emailError": "Bitte gib eine gültige E-Mail-Adresse ein.",
+      "emailError": "Bitte gib eine gültige E-Mail-Adresse ein, z. B. name@beispiel.de.",
       "messageLabel": "Wie kann ich dir helfen?",
       "messagePlaceholder": "Hallo Chris, ich interessiere mich für...",
-      "messageError": "Bitte schreib eine Nachricht.",
+      "messageError": "Bitte schreib mindestens 5 Zeichen.",
       "privacyBefore": "Ich habe die",
       "privacyLink": "Datenschutzerklärung",
       "privacyAfter": "gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.",

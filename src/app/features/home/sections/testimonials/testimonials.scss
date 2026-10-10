@@ -2,7 +2,6 @@
 
 .testimonials {
   padding-top: 167px;
-  overflow: hidden;
 }
 
 .testimonials__title {
@@ -21,8 +20,10 @@
   position: relative;
   display: grid;
   place-items: center;
-  height: 274px;
-  margin-top: 51px;
+  max-width: 1440px;
+  height: 314px;
+  margin: 31px auto 0;
+  overflow: hidden;
 
   &::after {
     content: '';
@@ -163,11 +164,11 @@
   }
 
   .testimonials__stage {
-    --card-width: calc(100vw - 32px);
+    --card-width: calc(100% - 32px);
     --card-gap: 8px;
 
-    height: 358px;
-    margin-top: 40px;
+    height: 398px;
+    margin-top: 20px;
 
     &::after {
       display: none;

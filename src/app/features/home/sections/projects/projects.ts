@@ -4,13 +4,14 @@ import { SITE_CONFIG } from '../../../../core/config/site.config';
 import { PROJECTS } from '../../../../core/data/portfolio.data';
 import { Icon } from '../../../../shared/components/icon/icon';
 import { ProjectDialog } from '../project-dialog/project-dialog';
+import { RevealDirective } from '../../../../shared/directives/reveal.directive';
 
 const PREVIEW_START_OFFSET = -10;
 const PREVIEW_STEP = 77;
 
 @Component({
   selector: 'app-projects',
-  imports: [TranslatePipe, ProjectDialog, Icon],
+  imports: [RevealDirective, TranslatePipe, ProjectDialog, Icon],
   templateUrl: './projects.html',
   styleUrl: './projects.scss',
 })

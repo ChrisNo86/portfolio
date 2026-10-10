@@ -1,8 +1,8 @@
 @if (slides().length) {
   <section class="testimonials" [attr.aria-label]="'testimonials.title' | translate">
-    <h2 class="testimonials__title">{{ 'testimonials.title' | translate }}</h2>
+    <h2 class="testimonials__title" appReveal>{{ 'testimonials.title' | translate }}</h2>
 
-    <div class="testimonials__stage" [class.testimonials__stage--static]="!animate()">
+    <div appReveal [delay]="150" class="testimonials__stage" [class.testimonials__stage--static]="!animate()">
       @for (slide of slides(); track slide.slot) {
         <figure
           class="card"

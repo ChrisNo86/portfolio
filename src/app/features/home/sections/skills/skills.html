@@ -1,6 +1,6 @@
 <section class="skills" id="skills">
   <div class="skills__inner container">
-    <div class="skills__intro">
+    <div class="skills__intro" appReveal="left">
       <p class="section-label">{{ 'skills.label' | translate }}</p>
       <article class="skills__card">
         <h2 class="section-title">{{ 'skills.title' | translate }}</h2>
@@ -16,7 +16,7 @@
       </article>
     </div>
 
-    <ul class="skills__grid">
+    <ul class="skills__grid" appReveal="right" [delay]="150">
       @for (skill of skills; track skill.labelKey) {
         <li class="skills__item" [class.skills__item--hint]="skill.hint" [attr.tabindex]="skill.hint ? 0 : null">
           @if (skill.hint; as hint) {

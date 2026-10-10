@@ -127,6 +127,12 @@
   color: var(--color-accent);
 }
 
+@include bp.tablet-down {
+  .projects__text {
+    text-align: left;
+  }
+}
+
 @include bp.mobile {
   .projects {
     padding-top: 104px;

@@ -1,5 +1,5 @@
 <section class="about container" id="about">
-  <div class="about__photo-frame">
+  <div class="about__photo-frame" appReveal="left">
     <span class="stripes"></span>
     <img
       class="about__photo"
@@ -11,7 +11,7 @@
     />
   </div>
 
-  <div class="about__content">
+  <div class="about__content" appReveal="right" [delay]="150">
     <p class="section-label">{{ 'about.label' | translate }}</p>
     <article class="about__card">
       <h2 class="section-title">{{ 'about.title' | translate }}</h2>

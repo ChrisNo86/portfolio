@@ -1,5 +1,5 @@
 <section class="contact container" id="contact">
-  <div class="contact__intro">
+  <div class="contact__intro" appReveal="left">
     <p class="section-label">{{ 'contact.label' | translate }}</p>
     <h2 class="section-title">{{ 'contact.title' | translate }}</h2>
     <h3 class="contact__subtitle">{{ 'contact.subtitle' | translate }}</h3>
@@ -10,7 +10,7 @@
     </p>
   </div>
 
-  <form class="form" [formGroup]="form" (ngSubmit)="submit()" novalidate>
+  <form appReveal="right" [delay]="150" class="form" [formGroup]="form" (ngSubmit)="submit()" novalidate>
     <div class="form__field">
       <label class="form__label" for="contact-name">{{ 'contact.form.nameLabel' | translate }}</label>
       <input
@@ -81,11 +81,13 @@
       </p>
     </div>
 
-    <button class="btn btn--marquee form__submit" type="submit" [disabled]="form.invalid || status() === 'sending'">
-      <span class="btn__label">
-        {{ (status() === 'sending' ? 'contact.form.sending' : 'contact.form.submit') | translate }}
-      </span>
-    </button>
+    <div class="form__submit-wrap" (click)="revealErrors()">
+      <button class="btn btn--marquee form__submit" type="submit" [disabled]="form.invalid || status() === 'sending'">
+        <span class="btn__label">
+          {{ (status() === 'sending' ? 'contact.form.sending' : 'contact.form.submit') | translate }}
+        </span>
+      </button>
+    </div>
 
     <p
       class="form__feedback"

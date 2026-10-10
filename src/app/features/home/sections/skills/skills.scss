@@ -1,6 +1,7 @@
 @use '../../../../../styles/breakpoints' as bp;
 
 .skills {
+  overflow-x: clip;
   padding-top: 171px;
   background: radial-gradient(
     348px 328px at 18px 469px,
@@ -17,7 +18,8 @@
 }
 
 .skills__intro {
-  flex: 0 0 520px;
+  min-width: 0;
+  flex: 0 1 520px;
 }
 
 .skills__card {
@@ -178,6 +180,18 @@
   }
 }
 
+@media (max-width: 1439px) {
+  .skills__grid {
+    grid-template-columns: repeat(3, 110px);
+    column-gap: 12px;
+    margin-right: 0;
+  }
+
+  .skills__item {
+    font-size: 16px;
+  }
+}
+
 @include bp.tablet-down {
   .skills__inner {
     flex-direction: column;
@@ -187,6 +201,10 @@
   .skills__intro {
     flex-basis: auto;
     max-width: 620px;
+  }
+
+  .skills__text {
+    text-align: left;
   }
 
   .skills__grid {

@@ -1,6 +1,7 @@
 @use '../../../../../styles/breakpoints' as bp;
 
 .contact {
+  overflow-x: clip;
   display: grid;
   grid-template-columns: minmax(0, 568px) minmax(0, 616px);
   justify-content: space-between;
@@ -201,9 +202,13 @@
   }
 }
 
-.form__submit {
+.form__submit-wrap {
   align-self: center;
   margin-top: 23px;
+}
+
+.form__submit:disabled {
+  pointer-events: none;
 }
 
 .form__feedback {

@@ -3,10 +3,11 @@ import { RouterLink } from '@angular/router';
 import { TranslatePipe } from '@ngx-translate/core';
 import { SKILLS } from '../../../../core/data/portfolio.data';
 import { Icon } from '../../../../shared/components/icon/icon';
+import { RevealDirective } from '../../../../shared/directives/reveal.directive';
 
 @Component({
   selector: 'app-skills',
-  imports: [RouterLink, TranslatePipe, Icon],
+  imports: [RevealDirective, RouterLink, TranslatePipe, Icon],
   templateUrl: './skills.html',
   styleUrl: './skills.scss',
 })

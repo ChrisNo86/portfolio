@@ -10,21 +10,41 @@ import { RouterLink } from '@angular/router';
 import { TranslatePipe } from '@ngx-translate/core';
 import { finalize } from 'rxjs';
 import { ContactService } from '../../../../core/services/contact.service';
+import { RevealDirective } from '../../../../shared/directives/reveal.directive';
 
 type SendStatus = 'idle' | 'sending' | 'success' | 'error';
 type TextField = 'name' | 'email' | 'message';
 type ContactField = TextField | 'privacy';
 
-const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+const NAME_PATTERN = /^[A-Za-zÀ-ÖØ-öø-ÿß]{2,}(?:[ '-][A-Za-zÀ-ÖØ-öø-ÿß]+)*$/;
+const EMAIL_PATTERN =
+  /^[A-Za-z0-9](?:[A-Za-z0-9._%+-]*[A-Za-z0-9])?@(?:[A-Za-z0-9](?:[A-Za-z0-9-]*[A-Za-z0-9])?\.)+[A-Za-z]{2,}$/;
+const MESSAGE_MIN_LENGTH = 5;
 const FEEDBACK_DURATION_MS = 5000;
 
 function notBlank(control: AbstractControl<string>): ValidationErrors | null {
   return control.value.trim() ? null : { required: true };
 }
 
+function trimmedPattern(pattern: RegExp) {
+  return (control: AbstractControl<string>): ValidationErrors | null => {
+    const value = control.value.trim();
+    if (!value) return null;
+    return pattern.test(value) && !value.includes('..') ? null : { pattern: true };
+  };
+}
+
+function trimmedMinLength(length: number) {
+  return (control: AbstractControl<string>): ValidationErrors | null => {
+    const value = control.value.trim();
+    if (!value) return null;
+    return value.length >= length ? null : { minlength: true };
+  };
+}
+
 @Component({
   selector: 'app-contact',
-  imports: [ReactiveFormsModule, RouterLink, TranslatePipe],
+  imports: [RevealDirective, ReactiveFormsModule, RouterLink, TranslatePipe],
   templateUrl: './contact.html',
   styleUrl: './contact.scss',
 })
@@ -32,9 +52,9 @@ export class Contact {
   private readonly contactService = inject(ContactService);
 
   protected readonly form = inject(NonNullableFormBuilder).group({
-    name: ['', notBlank],
-    email: ['', [notBlank, Validators.pattern(EMAIL_PATTERN)]],
-    message: ['', notBlank],
+    name: ['', [notBlank, trimmedPattern(NAME_PATTERN)]],
+    email: ['', [notBlank, trimmedPattern(EMAIL_PATTERN)]],
+    message: ['', [notBlank, trimmedMinLength(MESSAGE_MIN_LENGTH)]],
     privacy: [false, Validators.requiredTrue],
   });
 
@@ -52,6 +72,11 @@ export class Contact {
 
   protected showHint(field: TextField): boolean {
     return this.showError(field) && !this.isMissing(field);
+  }
+
+  protected revealErrors(): void {
+    if (this.form.valid) return;
+    this.form.markAllAsTouched();
   }
 
   protected submit(): void {

@@ -3,6 +3,7 @@ import { TranslatePipe } from '@ngx-translate/core';
 import { translatedList } from '../../../../core/i18n/translated-list';
 import { Testimonial } from '../../../../core/models/portfolio.models';
 import { Icon } from '../../../../shared/components/icon/icon';
+import { RevealDirective } from '../../../../shared/directives/reveal.directive';
 
 interface Slide {
   testimonial: Testimonial;
@@ -15,7 +16,7 @@ const SLIDE_DURATION_MS = 450;
 
 @Component({
   selector: 'app-testimonials',
-  imports: [TranslatePipe, Icon],
+  imports: [RevealDirective, TranslatePipe, Icon],
   templateUrl: './testimonials.html',
   styleUrl: './testimonials.scss',
 })
