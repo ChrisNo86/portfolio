@@ -129,6 +129,14 @@
   }
 }
 
+.testimonials__note {
+  margin-top: 24px;
+  padding-inline: var(--gutter);
+  font-size: 14px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.5);
+}
+
 .testimonials__dots {
   display: flex;
   gap: 20px;

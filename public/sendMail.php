@@ -1,14 +1,14 @@
 <?php
 /**
  * Contact form endpoint – receives JSON { name, email, message } and forwards it by mail.
- * Configure RECIPIENT and ALLOWED_ORIGIN before uploading.
+ * RECIPIENT receives the messages; only requests from ALLOWED_ORIGIN are accepted.
  */
 
 declare(strict_types=1);
 
-const RECIPIENT = 'TODO@your-domain.de';            // TODO: your inbox
-const ALLOWED_ORIGIN = 'https://TODO-your-domain.de'; // TODO: your portfolio domain
-const SENDER = 'noreply@TODO-your-domain.de';         // TODO: address on your domain
+const RECIPIENT = 'chris86noack@gmail.com';
+const ALLOWED_ORIGIN = 'https://christiannoack.developerakademie.net';
+const SENDER = 'noreply@christiannoack.developerakademie.net';
 
 header('Access-Control-Allow-Origin: ' . ALLOWED_ORIGIN);
 header('Access-Control-Allow-Methods: POST, OPTIONS');

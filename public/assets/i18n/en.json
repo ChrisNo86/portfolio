@@ -79,18 +79,19 @@
     "goTo": "Show testimonial",
     "items": [
       {
-        "quote": "[TODO: real quote from a teammate]",
-        "author": "[TODO: Name - Role]"
+        "quote": "Chris was a reliable team partner. He structured our tasks clearly and always helped when someone got stuck.",
+        "author": "Team member – Group project (example)"
       },
       {
-        "quote": "[TODO: real quote from a teammate]",
-        "author": "[TODO: Name - Role]"
+        "quote": "Working with Chris was easy and productive. His code was clean and well documented, which made reviews quick.",
+        "author": "Team member – Frontend project (example)"
       },
       {
-        "quote": "[TODO: real quote from a teammate]",
-        "author": "[TODO: Name - Role]"
+        "quote": "Chris stays calm under pressure and brings good ideas into the team. I would happily work with him again.",
+        "author": "Team member – Group project (example)"
       }
-    ]
+    ],
+    "note": "Example testimonials – illustrative content for this course project."
   },
   "contact": {
     "label": "Contact me",
@@ -191,7 +192,7 @@
       {
         "title": "3. Hosting and server log files",
         "paragraphs": [
-          "This website is hosted by [TODO: name and address of your hosting provider]. When you visit the website, the server automatically stores information in log files: IP address, date and time of the request, requested page, browser type and version, operating system and referrer URL.",
+          "This website is hosted on the server of Developer Akademie GmbH, Tassiloplatz 25, 81541 München, Germany. When you visit the website, the server automatically stores information in log files: IP address, date and time of the request, requested page, browser type and version, operating system and referrer URL.",
           "This data is required to deliver the website securely and is processed on the basis of Art. 6 (1) (f) GDPR (legitimate interest in the secure and stable operation of the website). It is not merged with other data sources."
         ]
       },

@@ -79,18 +79,19 @@
     "goTo": "Testimonial anzeigen",
     "items": [
       {
-        "quote": "[TODO: echtes Zitat eines Teammitglieds]",
-        "author": "[TODO: Name - Rolle]"
+        "quote": "Chris war ein zuverlässiger Teampartner. Er hat unsere Aufgaben klar strukturiert und immer geholfen, wenn jemand nicht weiterkam.",
+        "author": "Teammitglied – Gruppenprojekt (Beispiel)"
       },
       {
-        "quote": "[TODO: echtes Zitat eines Teammitglieds]",
-        "author": "[TODO: Name - Rolle]"
+        "quote": "Die Zusammenarbeit mit Chris war unkompliziert und produktiv. Sein Code war sauber und gut dokumentiert, dadurch gingen Reviews schnell.",
+        "author": "Teammitglied – Frontend-Projekt (Beispiel)"
       },
       {
-        "quote": "[TODO: echtes Zitat eines Teammitglieds]",
-        "author": "[TODO: Name - Rolle]"
+        "quote": "Chris bleibt auch unter Zeitdruck ruhig und bringt gute Ideen ins Team ein. Ich würde jederzeit wieder mit ihm arbeiten.",
+        "author": "Teammitglied – Gruppenprojekt (Beispiel)"
       }
-    ]
+    ],
+    "note": "Beispiel-Testimonials – illustrative Inhalte für dieses Kursprojekt."
   },
   "contact": {
     "label": "Kontakt",
@@ -191,7 +192,7 @@
       {
         "title": "3. Hosting und Server-Logfiles",
         "paragraphs": [
-          "Diese Website wird gehostet bei [TODO: Name und Anschrift deines Hosting-Anbieters]. Beim Aufruf der Website speichert der Server automatisch Informationen in Logfiles: IP-Adresse, Datum und Uhrzeit des Zugriffs, aufgerufene Seite, Browsertyp und -version, Betriebssystem und Referrer-URL.",
+          "Diese Website wird auf dem Server der Developer Akademie GmbH, Tassiloplatz 25, 81541 München, gehostet. Beim Aufruf der Website speichert der Server automatisch Informationen in Logfiles: IP-Adresse, Datum und Uhrzeit des Zugriffs, aufgerufene Seite, Browsertyp und -version, Betriebssystem und Referrer-URL.",
           "Diese Daten sind für die sichere Auslieferung der Website erforderlich und werden auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO verarbeitet (berechtigtes Interesse am sicheren und stabilen Betrieb der Website). Eine Zusammenführung mit anderen Datenquellen findet nicht statt."
         ]
       },

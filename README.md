@@ -15,15 +15,14 @@ npm run build      # output: dist/portfolio/browser
 Upload the **contents** of `dist/portfolio/browser` to the web root of your domain.
 It contains `sendMail.php` (contact form) and `.htaccess` (HTTPS redirect + Angular routing).
 
-## Before submission – fill in the TODOs
+## Where to change content
 
 | File | What |
 | --- | --- |
-| `src/app/core/config/site.config.ts` | e-mail, LinkedIn URL, postal address |
-| `src/app/core/data/portfolio.data.ts` | live URLs (subdomains) of the projects |
-| `public/sendMail.php` | recipient, domain, sender address |
-| `public/assets/i18n/en.json` / `de.json` | testimonials, hosting provider (privacy policy) |
-| `public/assets/img/` | project preview images (Memory is a placeholder) |
+| `src/app/core/config/site.config.ts` | name, e-mail, GitHub/LinkedIn, address |
+| `src/app/core/data/portfolio.data.ts` | projects (links, images, technologies), skills |
+| `public/assets/i18n/en.json` / `de.json` | all texts incl. testimonials and legal pages |
+| `public/sendMail.php` | recipient and allowed origin of the contact form |
 
 ## Structure
 

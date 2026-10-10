@@ -1,20 +1,20 @@
 /**
  * Central place for personal data and external links.
- * Everything marked with TODO must be filled in before submission.
+ * Personal data and external links used across the site.
  */
 export const SITE_CONFIG = {
   ownerName: 'Chris Noack',
-  // TODO: public contact e-mail address (shown in hero, footer and legal pages)
-  email: 'TODO@your-domain.de',
+  // Public contact e-mail address (hero, footer, legal pages)
+  email: 'chris86noack@gmail.com',
   githubUrl: 'https://github.com/ChrisNo86',
-  // TODO: add your LinkedIn profile URL (required by the course checklist). Empty = hidden.
+  // LinkedIn profile URL. Empty = all LinkedIn links are hidden.
   linkedinUrl: '',
   // Endpoint of the PHP mailer that is uploaded together with the build.
   mailEndpoint: 'sendMail.php',
-  // TODO: postal address for the legal notice (required by § 5 DDG)
+  // Postal address for the legal notice (required by § 5 DDG)
   address: {
-    street: 'TODO Straße 1',
-    city: 'TODO 00000 Stadt',
+    street: 'Eggestr. 4a',
+    city: '32758 Detmold',
     country: 'Deutschland / Germany',
   },
 } as const;

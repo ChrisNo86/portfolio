@@ -11,7 +11,8 @@ const TECH = {
   firebase: { name: 'Firebase', icon: `${ICONS}/tech-firebase.svg` },
 } satisfies Record<string, Technology>;
 
-// TODO: replace liveUrl with the subdomains on your own server.
+const LIVE_BASE_URL = 'https://christiannoack.developerakademie.net';
+
 export const PROJECTS: Project[] = [
   {
     id: 'join',
@@ -19,7 +20,7 @@ export const PROJECTS: Project[] = [
     descriptionKey: 'projects.items.join',
     technologies: [TECH.html, TECH.scss, TECH.javascript, TECH.firebase],
     githubUrl: 'https://github.com/ChrisNo86/join-app',
-    liveUrl: 'https://join.TODO-your-domain.de',
+    liveUrl: `${LIVE_BASE_URL}/join`,
     image: 'assets/img/project-join.jpg',
   },
   {
@@ -28,7 +29,7 @@ export const PROJECTS: Project[] = [
     descriptionKey: 'projects.items.elPolloLoco',
     technologies: [TECH.html, TECH.scss, TECH.javascript],
     githubUrl: 'https://github.com/ChrisNo86/el-pollo-loco',
-    liveUrl: 'https://el-pollo-loco.TODO-your-domain.de',
+    liveUrl: `${LIVE_BASE_URL}/el-pollo-loco`,
     image: 'assets/img/project-el-pollo-loco.jpg',
   },
   {
@@ -37,7 +38,7 @@ export const PROJECTS: Project[] = [
     descriptionKey: 'projects.items.memory',
     technologies: [TECH.typescript, TECH.html, TECH.css],
     githubUrl: 'https://github.com/ChrisNo86/memory',
-    liveUrl: 'https://memory.TODO-your-domain.de',
+    liveUrl: `${LIVE_BASE_URL}/memory`,
     image: 'assets/img/project-memory.jpg',
   },
 ];
@@ -56,7 +57,6 @@ export const SKILLS: Skill[] = [
   {
     labelKey: 'skills.items.growthMindset',
     icon: `${ICONS}/skill-growth.svg`,
-    // TODO: adjust to the technologies you are really interested in learning
     hint: {
       textKey: 'skills.growthHint',
       technologies: [
