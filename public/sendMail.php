@@ -1,8 +1,4 @@
 <?php
-/**
- * Contact form endpoint – receives JSON { name, email, message } and forwards it by mail.
- * RECIPIENT receives the messages; only requests from ALLOWED_ORIGIN are accepted.
- */
 
 declare(strict_types=1);
 
@@ -51,7 +47,6 @@ if (!mail(RECIPIENT, $subject, $body, $headers)) {
 
 respond(200, 'OK');
 
-/** Removes line breaks to prevent header injection. */
 function singleLine(string $value): string
 {
     return trim(str_replace(["\r", "\n"], ' ', $value));

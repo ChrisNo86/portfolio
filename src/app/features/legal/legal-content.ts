@@ -3,7 +3,6 @@ import { TranslatePipe } from '@ngx-translate/core';
 import { SITE_CONFIG } from '../../core/config/site.config';
 import { LegalSection } from '../../core/models/portfolio.models';
 
-/** Placeholders inside the legal texts that are filled from SITE_CONFIG. */
 const PLACEHOLDERS: Record<string, string> = {
   '{name}': SITE_CONFIG.ownerName,
   '{street}': SITE_CONFIG.address.street,

@@ -8,7 +8,6 @@ export interface Technology {
 export interface Project {
   id: string;
   title: string;
-  /** i18n key of the project description */
   descriptionKey: string;
   technologies: Technology[];
   githubUrl: string;
@@ -17,16 +16,13 @@ export interface Project {
 }
 
 export interface SkillHint {
-  /** i18n key of the tooltip text */
   textKey: string;
   technologies: Technology[];
 }
 
 export interface Skill {
-  /** i18n key of the label */
   labelKey: string;
   icon: string;
-  /** Optional tooltip shown on hover */
   hint?: SkillHint;
 }
 

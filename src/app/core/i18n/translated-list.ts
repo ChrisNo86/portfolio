@@ -3,10 +3,6 @@ import { toSignal } from '@angular/core/rxjs-interop';
 import { TranslateService } from '@ngx-translate/core';
 import { map } from 'rxjs';
 
-/**
- * Reactive access to an array stored in the translation files.
- * Must be called in an injection context (field initializer).
- */
 export function translatedList<T>(key: string): Signal<T[]> {
   const translate = inject(TranslateService);
   return toSignal(

@@ -9,19 +9,20 @@ const TECH = {
   javascript: { name: 'JavaScript', icon: `${ICONS}/tech-javascript.svg` },
   typescript: { name: 'TypeScript', icon: `${ICONS}/tech-typescript.svg` },
   firebase: { name: 'Firebase', icon: `${ICONS}/tech-firebase.svg` },
+  angular: { name: 'Angular', icon: `${ICONS}/tech-angular.svg` },
 } satisfies Record<string, Technology>;
 
 const LIVE_BASE_URL = 'https://christiannoack.developerakademie.net';
 
 export const PROJECTS: Project[] = [
   {
-    id: 'join',
-    title: 'Join',
-    descriptionKey: 'projects.items.join',
-    technologies: [TECH.html, TECH.scss, TECH.javascript, TECH.firebase],
-    githubUrl: 'https://github.com/ChrisNo86/join-app',
-    liveUrl: `${LIVE_BASE_URL}/join`,
-    image: 'assets/img/project-join.jpg',
+    id: 'poll-app',
+    title: 'Poll App',
+    descriptionKey: 'projects.items.pollApp',
+    technologies: [TECH.angular, TECH.typescript, TECH.firebase, TECH.scss],
+    githubUrl: 'https://github.com/ChrisNo86',
+    liveUrl: `${LIVE_BASE_URL}/poll-app/#/`,
+    image: 'assets/img/project-poll-app.jpg',
   },
   {
     id: 'el-pollo-loco',
@@ -29,7 +30,7 @@ export const PROJECTS: Project[] = [
     descriptionKey: 'projects.items.elPolloLoco',
     technologies: [TECH.html, TECH.scss, TECH.javascript],
     githubUrl: 'https://github.com/ChrisNo86/el-pollo-loco',
-    liveUrl: `${LIVE_BASE_URL}/el-pollo-loco`,
+    liveUrl: `${LIVE_BASE_URL}/el-pollo-loco/index.html`,
     image: 'assets/img/project-el-pollo-loco.jpg',
   },
   {
@@ -38,7 +39,7 @@ export const PROJECTS: Project[] = [
     descriptionKey: 'projects.items.memory',
     technologies: [TECH.typescript, TECH.html, TECH.css],
     githubUrl: 'https://github.com/ChrisNo86/memory',
-    liveUrl: `${LIVE_BASE_URL}/memory`,
+    liveUrl: `${LIVE_BASE_URL}/memory/index.html`,
     image: 'assets/img/project-memory.jpg',
   },
 ];

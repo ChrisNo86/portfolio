@@ -36,8 +36,6 @@
   font-weight: 700;
 }
 
-/* ---------- Form ---------- */
-
 .form {
   position: relative;
   display: flex;
@@ -93,7 +91,6 @@
     color: var(--color-error) !important;
   }
 
-  // Keep the dark design when the browser autofills the fields (WebKit/Blink).
   &:-webkit-autofill,
   &:-webkit-autofill:hover,
   &:-webkit-autofill:focus {
@@ -110,7 +107,6 @@
   resize: none;
 }
 
-/* Error messages are absolutely positioned → no layout shift. */
 .form__error {
   position: absolute;
   left: 32px;

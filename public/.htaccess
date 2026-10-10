@@ -1,13 +1,9 @@
-# The portfolio lives in the sub folder /portfolio/ on the server.
-# If you move it, adjust RewriteBase and "baseHref" in angular.json.
 RewriteEngine On
 RewriteBase /portfolio/
 
-# Force HTTPS
 RewriteCond %{HTTPS} !=on
 RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
-# Angular routing: serve index.html for all non-file requests
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^ index.html [L]

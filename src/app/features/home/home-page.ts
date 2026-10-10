@@ -10,12 +10,6 @@ import { Projects } from './sections/projects/projects';
 import { Testimonials } from './sections/testimonials/testimonials';
 import { Contact } from './sections/contact/contact';
 
-/**
- * Above-the-fold content (hero, about) is part of the home chunk.
- * All following sections are split into their own lazy chunks and loaded
- * as soon as the browser is idle, so anchor links (#skills, #projects,
- * #contact) still work right after the first render.
- */
 @Component({
   selector: 'app-home-page',
   imports: [Hero, About, Skills, Projects, Testimonials, Contact],

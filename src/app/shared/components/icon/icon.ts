@@ -1,9 +1,5 @@
 import { Component, computed, input } from '@angular/core';
 
-/**
- * Monochrome SVG icon rendered via CSS mask, so it inherits `color`
- * and can change color on hover like text.
- */
 @Component({
   selector: 'app-icon',
   template: '',
@@ -26,15 +22,9 @@ import { Component, computed, input } from '@angular/core';
   `,
 })
 export class Icon {
-  /** File name in assets/icons without extension … */
   readonly name = input<string>();
-  /** … or a full path to an SVG file. */
   readonly src = input<string>();
   readonly size = input(24);
-  /**
-   * 'alpha' (default) for single-colour icons; 'luminance' for icons that contain
-   * dark cut-outs (e.g. the "TS" letters), so the dark parts stay transparent.
-   */
   readonly maskMode = input<'alpha' | 'luminance'>('alpha');
 
   protected readonly url = computed(() => `url('${this.src() ?? `assets/icons/${this.name()}.svg`}')`);

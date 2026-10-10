@@ -12,7 +12,6 @@ import { translatedList } from '../../../../core/i18n/translated-list';
 })
 export class Hero {
   protected readonly config = SITE_CONFIG;
-  /** Rendered twice so the marquee can loop seamlessly. */
   protected readonly marqueeCopies = [0, 1];
   protected readonly bannerItems = translatedList<string>('hero.banner');
 }

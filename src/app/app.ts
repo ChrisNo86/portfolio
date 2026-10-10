@@ -16,6 +16,5 @@ import { Footer } from './shared/components/footer/footer';
   `,
 })
 export class App {
-  // Injected eagerly so the stored/browser language is applied on startup.
   private readonly language = inject(LanguageService);
 }

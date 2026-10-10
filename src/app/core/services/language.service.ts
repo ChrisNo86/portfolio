@@ -51,7 +51,7 @@ export class LanguageService {
     try {
       localStorage.setItem(STORAGE_KEY, language);
     } catch {
-      // Storage unavailable (private mode) – the language still works for this visit.
+      return;
     }
   }
 }

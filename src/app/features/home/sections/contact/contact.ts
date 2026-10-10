@@ -18,7 +18,6 @@ type ContactField = TextField | 'privacy';
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 const FEEDBACK_DURATION_MS = 5000;
 
-/** Like Validators.required, but also rejects input that only contains spaces. */
 function notBlank(control: AbstractControl<string>): ValidationErrors | null {
   return control.value.trim() ? null : { required: true };
 }
@@ -41,19 +40,16 @@ export class Contact {
 
   protected readonly status = signal<SendStatus>('idle');
 
-  /** Errors are only shown after the field was left once (touched on blur). */
   protected showError(field: ContactField): boolean {
     const control = this.form.controls[field];
     return control.invalid && control.touched;
   }
 
-  /** Empty required field after blur → the placeholder itself turns into the error message. */
   protected isMissing(field: TextField): boolean {
     const control = this.form.controls[field];
     return control.touched && control.value.trim() === '';
   }
 
-  /** Invalid but not empty (e.g. malformed email) → separate hint below the input. */
   protected showHint(field: TextField): boolean {
     return this.showError(field) && !this.isMissing(field);
   }

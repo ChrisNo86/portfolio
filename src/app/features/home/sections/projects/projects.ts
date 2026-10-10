@@ -5,7 +5,6 @@ import { PROJECTS } from '../../../../core/data/portfolio.data';
 import { Icon } from '../../../../shared/components/icon/icon';
 import { ProjectDialog } from '../project-dialog/project-dialog';
 
-/** Vertical offset of the hover preview per list row (from the prototype). */
 const PREVIEW_START_OFFSET = -10;
 const PREVIEW_STEP = 77;
 
@@ -26,7 +25,6 @@ export class Projects {
     return index === null ? null : { project: this.projects[index], number: index + 1 };
   });
 
-  /** Keeps the last preview visible while it fades out. */
   private readonly lastHovered = signal(0);
   protected readonly preview = computed(() => {
     const index = this.lastHovered();
