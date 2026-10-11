@@ -1,7 +1,11 @@
 @use '../../../../../styles/breakpoints' as bp;
 
 .hero {
+  --line-top: calc(50% + 210px);
+  --rail-gap: 24px;
+
   position: relative;
+  isolation: isolate;
   height: 100vh;
   min-height: 600px;
   overflow: hidden;
@@ -42,27 +46,41 @@
 
 .hero__rail {
   position: absolute;
+  top: var(--line-top);
   bottom: 0;
+  display: flex;
+  justify-content: center;
+  width: 32px;
+}
+
+.hero__rail--start {
+  left: max(var(--gutter), (100% - var(--content-width)) / 2);
+  margin-left: -1px;
+}
+
+.hero__rail--end {
+  right: max(var(--gutter) - 3px, (100% - var(--content-width)) / 2 - 3px);
+  margin-right: -3px;
+}
+
+.hero__rail-content {
+  position: absolute;
+  bottom: calc(100% + var(--rail-gap));
+  z-index: 3;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.hero__rail--start {
-  top: calc(50% + 138px);
-  left: max(var(--gutter), (100% - var(--content-width)) / 2);
-  gap: 24px;
-}
-
-.hero__rail--end {
-  top: calc(50% - 28px);
-  right: max(var(--gutter) - 3px, (100% - var(--content-width)) / 2 - 3px);
+.hero__rail--end .hero__rail-content {
   gap: 18px;
 }
 
 .hero__line {
-  flex: 1;
+  position: relative;
+  z-index: 1;
   width: 1px;
+  height: 100%;
   background-color: var(--color-text);
 
   &--accent {
@@ -127,6 +145,7 @@
 
 .marquee {
   position: absolute;
+  z-index: 2;
   left: -40px;
   right: -40px;
   bottom: 39px;
@@ -193,13 +212,21 @@
     margin-top: 32px;
   }
 
+  .hero {
+    --line-top: calc(50% + 200px);
+  }
+
   .hero__rail--start {
-    top: calc(50% + 126px);
+    left: var(--gutter);
+    margin-left: -1px;
   }
 
   .hero__rail--end {
-    top: calc(50% + 166px);
     right: var(--gutter);
+    margin-right: 0;
+  }
+
+  .hero__rail--end .hero__rail-content {
     gap: 15px;
   }
 
@@ -237,7 +264,7 @@
     }
   }
 
-  .hero__rail--start {
-    top: calc(50% + 150px);
+  .hero {
+    --line-top: calc(50% + 240px);
   }
 }
